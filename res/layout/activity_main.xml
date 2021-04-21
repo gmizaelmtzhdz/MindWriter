@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="5dp">
+<ScrollView android:layout_width="match_parent"
+	    		android:layout_height="match_parent"
+	            android:id="@+id/scrollConfiguracion"
+        	    android:layout_alignParentTop="true">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/bg"/>
+    <Button 
+        android:id="@+id/conectar"
+        android:layout_width="match_parent"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
+        android:textAlignment="gravity"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:drawableRight="@android:drawable/stat_sys_data_bluetooth"
+        android:layout_below="@+id/imageView"
+        android:text="Conectar"
+        />
+
+    <Button
+        android:id="@+id/capturar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
+        android:textAlignment="gravity"
+        android:gravity="center"
+        android:layout_below="@+id/conectar"
+        android:drawableRight="@android:drawable/stat_sys_headset"
+        android:text="Capturar" />
+    <Button
+        android:id="@+id/limpiar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
+        android:textAlignment="gravity"
+        android:gravity="center"
+        android:layout_below="@+id/capturar"
+        android:drawableRight="@android:drawable/ic_menu_delete"
+        android:text="Limpiar" />
+	<TextView
+        android:id="@+id/textViewLabelVelocidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/limpiar"
+        android:layout_marginTop="20dp"
+        android:text="Velocidad de recepción [2/10]" />
+    <SeekBar
+        android:id="@+id/seekBarVelocidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewLabelVelocidad"/>
+    
+    <EditText
+        android:id="@+id/editTextSenalConvertidaEnTexto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBarVelocidad"
+        android:minHeight="80dp"
+        android:ems="10"
+        android:inputType="textMultiLine" >
+    </EditText>
+    
+    <Button
+        android:id="@+id/facebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
+        android:layout_below="@+id/editTextSenalConvertidaEnTexto"
+        android:drawableRight="@drawable/ic_launcher_facebook"
+        android:text="Compartir en Facebook"/>
+    <Button
+        android:id="@+id/twitter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
+        android:layout_below="@+id/facebook"
+        android:drawableRight="@drawable/ic_launcher_twitter"
+        android:text="Compartir en Twitter" />
+    
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
